@@ -1,4 +1,4 @@
-# nuxt-ssr
+# nuxt-ssr-demo
 
 ## Build Setup
 

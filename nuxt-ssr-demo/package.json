@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-ssr",
+  "name": "nuxt-ssr-demo",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
-    "ant-design-vue": "^1.7.8",
     "core-js": "^3.25.3",
     "nuxt": "^2.15.8",
     "vue": "^2.7.10",

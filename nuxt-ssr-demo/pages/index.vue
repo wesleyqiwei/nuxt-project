@@ -1,5 +1,7 @@
 <template>
-  <Tutorial />
+    <div class="out-box">
+        <h1>demo IndexPage</h1>
+    </div>
 </template>
 
 <script>
