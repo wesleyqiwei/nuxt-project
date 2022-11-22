@@ -1,15 +1,21 @@
 <template>
   <div>
-    <nav>
-      <nuxt-link to="/">首页</nuxt-link>
-      <nuxt-link to="/car">购物车</nuxt-link>
-      <nuxt-link to="/login">登录</nuxt-link>
-      <nuxt-link to="/about">关于</nuxt-link>
-    </nav>
-    <nuxt />
+    <h1 v-if="error.statusCode === 404">啊哦，404 你访问的页面被Wesley吃啦</h1>
+    <h1 v-else>{{ error.message }}</h1>
+    <nuxt-link to="/">首页</nuxt-link>
   </div>
 </template>
-
+<script>
+export default {
+  layout: 'blank',
+  props: {
+    error: {
+      type: Object, // 类型
+      default: null // 默认值
+    }
+  }
+}
+</script>
 <style>
 html {
   font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',

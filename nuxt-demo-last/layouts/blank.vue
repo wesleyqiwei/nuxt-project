@@ -1,11 +1,5 @@
 <template>
   <div>
-    <nav>
-      <nuxt-link to="/">首页</nuxt-link>
-      <nuxt-link to="/car">购物车</nuxt-link>
-      <nuxt-link to="/login">登录</nuxt-link>
-      <nuxt-link to="/about">关于</nuxt-link>
-    </nav>
     <nuxt />
   </div>
 </template>

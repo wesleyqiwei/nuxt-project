@@ -23,7 +23,13 @@ module.exports = {
   /*
    ** Global CSS
    */
-  css: [],
+  css: [
+    // 配置全局scss
+    { src: '~/assets/css/common.scss', lang: 'scss' }
+  ],
+  styleResources: {
+    scss: ['~/assets/css/common.scss']
+  },
   /*
    ** Plugins to load before mounting the App
    */
@@ -40,13 +46,28 @@ module.exports = {
    */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxtjs/proxy',
+    '@nuxtjs/style-resources'
   ],
   /*
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    proxy: true
+  },
+  proxy: {
+    '/prod-api': {
+      target: 'http://10.10.25.153:11003', // 目标接口域名
+
+      changeOrigin: true, // 表示是否跨域
+
+      pathRewrite: {
+        '^/prod-api': '' // 把 /api 替换成 /
+      }
+    }
+  },
   /*
    ** Build configuration
    */

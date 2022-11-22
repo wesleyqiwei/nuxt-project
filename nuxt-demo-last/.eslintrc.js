@@ -20,6 +20,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     'nuxt/no-cjs-in-config': 'off',
-    "vue/multi-word-component-names":"off"
+    "vue/multi-word-component-names":"off",
+    "no-console": [0, "log", "error"]
   }
 }
